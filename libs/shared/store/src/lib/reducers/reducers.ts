@@ -4,7 +4,7 @@ import { isArray, isSingle } from '@askanative-angulartoolkit/shared/common';
 
 export const listReducer = {
   loading: <T>(state: ReducerState<T>) => ({
-    ...JSON.parse(JSON.stringify(state)),
+    ...state,
     type: StateType.Loading,
     isLoading: true,
   }),
