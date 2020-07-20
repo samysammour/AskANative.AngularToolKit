@@ -187,6 +187,66 @@
           "style": "scss"
         }
       }
+    },
+    "shared-validation": {
+      "projectType": "library",
+      "root": "libs/shared/validation",
+      "sourceRoot": "libs/shared/validation/src",
+      "prefix": "askanative-angulartoolkit",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/validation/tsconfig.lib.json",
+              "libs/shared/validation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/validation/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/validation/jest.config.js",
+            "tsConfig": "libs/shared/validation/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/validation/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "validation": {
+      "projectType": "library",
+      "root": "libs/validation",
+      "sourceRoot": "libs/validation/src",
+      "prefix": "askanative-angulartoolkit",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/validation/tsconfig.lib.json",
+              "libs/validation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/validation/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/validation/jest.config.js",
+            "tsConfig": "libs/validation/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/validation/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

@@ -63,12 +63,19 @@
             "sourceTag": "scope:shared",
             "onlyDependOnLibsWithTags": [
               "type:common",
-              "type:store"
+              "type:store",
+              "type:validation"
+            ]
+          },
+           {
+            "sourceTag": "type:validation",
+           "onlyDependOnLibsWithTags": [
+              "type:common"
             ]
           },
           {
             "sourceTag": "scope:aan",
-            "onlyDependOnLibsWithTags": ["scope:aan", "scope:shared", "type:common"]
+            "onlyDependOnLibsWithTags": ["scope:aan", "scope:shared"]
           }
         ]
       }

@@ -31,6 +31,9 @@
     },
     "shared-store": {
       "tags": ["scope:shared", "type:store"]
+    },
+    "shared-validation": {
+      "tags": ["scope:shared", "type:validation"]
     }
   }
 }

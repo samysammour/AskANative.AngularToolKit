@@ -21,6 +21,9 @@
       ],
       "@askanative-angulartoolkit/shared/store": [
         "libs/shared/store/src/index.ts"
+      ],
+      "@askanative-angulartoolkit/shared/validation": [
+        "libs/shared/validation/src/index.ts"
       ]
     }
   },

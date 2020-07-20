@@ -13,6 +13,13 @@ const routes: Routes = [
             (m) => m.StoreTestModule
           ),
       },
+      {
+        path: 'validation',
+        loadChildren: () =>
+          import('./validation-test/validation-test.module').then(
+            (m) => m.ValidationTestModule
+          ),
+      },
     ],
   },
 ];
